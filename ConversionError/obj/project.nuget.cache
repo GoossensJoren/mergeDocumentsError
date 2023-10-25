@@ -1,0 +1,18 @@
+{
+  "version": 2,
+  "dgSpecHash": "WN6/hoWDaXRERFghun87BnpTk3dl9RLqR+yatpyYT+fms8oZWVsYgnkL2i7/oVNc/p7if8ujKhmp3hs3cXgSCw==",
+  "success": true,
+  "projectFilePath": "C:\\Users\\jgoos\\source\\repos\\ConversionError\\ConversionError\\ConversionError.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\jgoos\\.nuget\\packages\\gembox.document\\33.0.1482-hotfix\\gembox.document.33.0.1482-hotfix.nupkg.sha512",
+    "C:\\Users\\jgoos\\.nuget\\packages\\microsoft.netcore.platforms\\5.0.0\\microsoft.netcore.platforms.5.0.0.nupkg.sha512",
+    "C:\\Users\\jgoos\\.nuget\\packages\\microsoft.win32.systemevents\\5.0.0\\microsoft.win32.systemevents.5.0.0.nupkg.sha512",
+    "C:\\Users\\jgoos\\.nuget\\packages\\portable.bouncycastle\\1.8.9\\portable.bouncycastle.1.8.9.nupkg.sha512",
+    "C:\\Users\\jgoos\\.nuget\\packages\\system.drawing.common\\5.0.0\\system.drawing.common.5.0.0.nupkg.sha512",
+    "C:\\Users\\jgoos\\.nuget\\packages\\system.runtime.compilerservices.unsafe\\5.0.0\\system.runtime.compilerservices.unsafe.5.0.0.nupkg.sha512",
+    "C:\\Users\\jgoos\\.nuget\\packages\\system.text.encoding.codepages\\5.0.0\\system.text.encoding.codepages.5.0.0.nupkg.sha512",
+    "C:\\Users\\jgoos\\.nuget\\packages\\microsoft.aspnetcore.app.ref\\3.1.10\\microsoft.aspnetcore.app.ref.3.1.10.nupkg.sha512",
+    "C:\\Users\\jgoos\\.nuget\\packages\\microsoft.netcore.app.host.win-x64\\3.1.28\\microsoft.netcore.app.host.win-x64.3.1.28.nupkg.sha512"
+  ],
+  "logs": []
+}

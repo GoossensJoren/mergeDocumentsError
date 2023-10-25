@@ -1,0 +1,8 @@
+{
+  "runtimeOptions": {
+    "additionalProbingPaths": [
+      "C:\\Users\\jgoos\\.dotnet\\store\\|arch|\\|tfm|",
+      "C:\\Users\\jgoos\\.nuget\\packages"
+    ]
+  }
+}
