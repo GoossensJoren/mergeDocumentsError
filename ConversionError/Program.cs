@@ -18,7 +18,10 @@ namespace ConversionError
             var document5 = DocumentModel.Load(Path.Combine(Directory.GetCurrentDirectory(), "file5.docx"));
             var document6 = DocumentModel.Load(Path.Combine(Directory.GetCurrentDirectory(), "file6.docx"));
 
-            var mergedDocument = MergeDocuments(new List<DocumentModel> { document1, document2, document3, document4, document5, document6 }, false);
+            var mergedDocument =
+                MergeDocuments(
+                    new List<DocumentModel>
+                        { document1, document2, document3, document4, document5, document6 }, false);
 
             using var stream = new MemoryStream();
             mergedDocument.Save("merged.docx", SaveOptions.DocxDefault);
@@ -82,3 +85,4 @@ namespace ConversionError
             }
         }
     }
+}
