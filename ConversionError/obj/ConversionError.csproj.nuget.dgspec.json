@@ -43,7 +43,7 @@
           "dependencies": {
             "GemBox.Document": {
               "target": "Package",
-              "version": "[33.0.1482-hotfix, )"
+              "version": "[35.0.1573, )"
             }
           },
           "imports": [

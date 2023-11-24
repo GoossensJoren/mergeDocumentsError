@@ -8,50 +8,66 @@
     ".NETCoreApp,Version=v3.1": {
       "ConversionError/1.0.0": {
         "dependencies": {
-          "GemBox.Document": "33.0.1482-hotfix"
+          "GemBox.Document": "35.0.1573"
         },
         "runtime": {
           "ConversionError.dll": {}
         }
       },
-      "GemBox.Document/33.0.1482-hotfix": {
+      "GemBox.Document/35.0.1573": {
         "dependencies": {
+          "HarfBuzzSharp": "7.3.0",
           "Portable.BouncyCastle": "1.8.9",
-          "System.Drawing.Common": "5.0.0",
-          "System.Text.Encoding.CodePages": "5.0.0"
+          "SkiaSharp": "2.88.6",
+          "System.Buffers": "4.5.1",
+          "System.Reflection.Emit.ILGeneration": "4.7.0",
+          "System.Reflection.Emit.Lightweight": "4.7.0",
+          "System.Text.Encoding.CodePages": "6.0.0"
         },
         "runtime": {
-          "lib/netcoreapp3.1/GemBox.Document.dll": {
-            "assemblyVersion": "33.0.0.1482",
-            "fileVersion": "33.0.310.1482"
-          }
-        },
-        "runtimeTargets": {
-          "runtimes/unix/lib/netcoreapp3.1/GemBox.Document.dll": {
-            "rid": "unix",
-            "assetType": "runtime",
-            "assemblyVersion": "33.0.0.1482",
-            "fileVersion": "33.0.200.1482"
+          "lib/netstandard2.0/GemBox.Document.dll": {
+            "assemblyVersion": "35.0.0.1573",
+            "fileVersion": "35.0.200.1573"
           }
         }
       },
-      "Microsoft.NETCore.Platforms/5.0.0": {},
-      "Microsoft.Win32.SystemEvents/5.0.0": {
+      "HarfBuzzSharp/7.3.0": {
         "dependencies": {
-          "Microsoft.NETCore.Platforms": "5.0.0"
+          "HarfBuzzSharp.NativeAssets.Win32": "7.3.0",
+          "HarfBuzzSharp.NativeAssets.macOS": "7.3.0"
         },
         "runtime": {
-          "lib/netstandard2.0/Microsoft.Win32.SystemEvents.dll": {
-            "assemblyVersion": "5.0.0.0",
-            "fileVersion": "5.0.20.51904"
+          "lib/netcoreapp3.1/HarfBuzzSharp.dll": {
+            "assemblyVersion": "1.0.0.0",
+            "fileVersion": "7.3.0.0"
           }
-        },
+        }
+      },
+      "HarfBuzzSharp.NativeAssets.macOS/7.3.0": {
         "runtimeTargets": {
-          "runtimes/win/lib/netcoreapp3.0/Microsoft.Win32.SystemEvents.dll": {
-            "rid": "win",
-            "assetType": "runtime",
-            "assemblyVersion": "5.0.0.0",
-            "fileVersion": "5.0.20.51904"
+          "runtimes/osx/native/libHarfBuzzSharp.dylib": {
+            "rid": "osx",
+            "assetType": "native",
+            "fileVersion": "0.0.0.0"
+          }
+        }
+      },
+      "HarfBuzzSharp.NativeAssets.Win32/7.3.0": {
+        "runtimeTargets": {
+          "runtimes/win-arm64/native/libHarfBuzzSharp.dll": {
+            "rid": "win-arm64",
+            "assetType": "native",
+            "fileVersion": "0.0.0.0"
+          },
+          "runtimes/win-x64/native/libHarfBuzzSharp.dll": {
+            "rid": "win-x64",
+            "assetType": "native",
+            "fileVersion": "0.0.0.0"
+          },
+          "runtimes/win-x86/native/libHarfBuzzSharp.dll": {
+            "rid": "win-x86",
+            "assetType": "native",
+            "fileVersion": "0.0.0.0"
           }
         }
       },
@@ -63,56 +79,73 @@
           }
         }
       },
-      "System.Drawing.Common/5.0.0": {
+      "SkiaSharp/2.88.6": {
         "dependencies": {
-          "Microsoft.Win32.SystemEvents": "5.0.0"
+          "SkiaSharp.NativeAssets.Win32": "2.88.6",
+          "SkiaSharp.NativeAssets.macOS": "2.88.6"
         },
         "runtime": {
-          "lib/netcoreapp3.0/System.Drawing.Common.dll": {
-            "assemblyVersion": "5.0.0.0",
-            "fileVersion": "5.0.20.51904"
+          "lib/netcoreapp3.1/SkiaSharp.dll": {
+            "assemblyVersion": "2.88.0.0",
+            "fileVersion": "2.88.6.0"
           }
-        },
+        }
+      },
+      "SkiaSharp.NativeAssets.macOS/2.88.6": {
         "runtimeTargets": {
-          "runtimes/unix/lib/netcoreapp3.0/System.Drawing.Common.dll": {
-            "rid": "unix",
-            "assetType": "runtime",
-            "assemblyVersion": "5.0.0.0",
-            "fileVersion": "5.0.20.51904"
+          "runtimes/osx/native/libSkiaSharp.dylib": {
+            "rid": "osx",
+            "assetType": "native",
+            "fileVersion": "0.0.0.0"
+          }
+        }
+      },
+      "SkiaSharp.NativeAssets.Win32/2.88.6": {
+        "runtimeTargets": {
+          "runtimes/win-arm64/native/libSkiaSharp.dll": {
+            "rid": "win-arm64",
+            "assetType": "native",
+            "fileVersion": "0.0.0.0"
           },
-          "runtimes/win/lib/netcoreapp3.0/System.Drawing.Common.dll": {
-            "rid": "win",
-            "assetType": "runtime",
-            "assemblyVersion": "5.0.0.0",
-            "fileVersion": "5.0.20.51904"
+          "runtimes/win-x64/native/libSkiaSharp.dll": {
+            "rid": "win-x64",
+            "assetType": "native",
+            "fileVersion": "0.0.0.0"
+          },
+          "runtimes/win-x86/native/libSkiaSharp.dll": {
+            "rid": "win-x86",
+            "assetType": "native",
+            "fileVersion": "0.0.0.0"
           }
         }
       },
-      "System.Runtime.CompilerServices.Unsafe/5.0.0": {
+      "System.Buffers/4.5.1": {},
+      "System.Reflection.Emit.ILGeneration/4.7.0": {},
+      "System.Reflection.Emit.Lightweight/4.7.0": {},
+      "System.Runtime.CompilerServices.Unsafe/6.0.0": {
         "runtime": {
-          "lib/netcoreapp2.0/System.Runtime.CompilerServices.Unsafe.dll": {
-            "assemblyVersion": "5.0.0.0",
-            "fileVersion": "5.0.20.51904"
+          "lib/netcoreapp3.1/System.Runtime.CompilerServices.Unsafe.dll": {
+            "assemblyVersion": "6.0.0.0",
+            "fileVersion": "6.0.21.52210"
           }
         }
       },
-      "System.Text.Encoding.CodePages/5.0.0": {
+      "System.Text.Encoding.CodePages/6.0.0": {
         "dependencies": {
-          "Microsoft.NETCore.Platforms": "5.0.0",
-          "System.Runtime.CompilerServices.Unsafe": "5.0.0"
+          "System.Runtime.CompilerServices.Unsafe": "6.0.0"
         },
         "runtime": {
-          "lib/netstandard2.0/System.Text.Encoding.CodePages.dll": {
-            "assemblyVersion": "5.0.0.0",
-            "fileVersion": "5.0.20.51904"
+          "lib/netcoreapp3.1/System.Text.Encoding.CodePages.dll": {
+            "assemblyVersion": "6.0.0.0",
+            "fileVersion": "6.0.21.52210"
           }
         },
         "runtimeTargets": {
-          "runtimes/win/lib/netcoreapp2.0/System.Text.Encoding.CodePages.dll": {
+          "runtimes/win/lib/netcoreapp3.1/System.Text.Encoding.CodePages.dll": {
             "rid": "win",
             "assetType": "runtime",
-            "assemblyVersion": "5.0.0.0",
-            "fileVersion": "5.0.20.51904"
+            "assemblyVersion": "6.0.0.0",
+            "fileVersion": "6.0.21.52210"
           }
         }
       }
@@ -124,26 +157,33 @@
       "serviceable": false,
       "sha512": ""
     },
-    "GemBox.Document/33.0.1482-hotfix": {
+    "GemBox.Document/35.0.1573": {
       "type": "package",
       "serviceable": true,
-      "sha512": "sha512-Ddlp6HFZ8x/JBfclAGlcAgyVStRhd6YdN9H4JZoT7Q0oNpzyKInAG2EdfI3h/mwFtGDjicSSLlhdGQPxxWPtlA==",
-      "path": "gembox.document/33.0.1482-hotfix",
-      "hashPath": "gembox.document.33.0.1482-hotfix.nupkg.sha512"
+      "sha512": "sha512-d1lE4IhU6NsMf6vjGqd0dx1ibdxWwsX3qN5ky0QsY9G75YSgtFJh59MPyR+59DifkOg2KQjriZ/owhTnCPENjA==",
+      "path": "gembox.document/35.0.1573",
+      "hashPath": "gembox.document.35.0.1573.nupkg.sha512"
     },
-    "Microsoft.NETCore.Platforms/5.0.0": {
+    "HarfBuzzSharp/7.3.0": {
       "type": "package",
       "serviceable": true,
-      "sha512": "sha512-VyPlqzH2wavqquTcYpkIIAQ6WdenuKoFN0BdYBbCWsclXacSOHNQn66Gt4z5NBqEYW0FAPm5rlvki9ZiCij5xQ==",
-      "path": "microsoft.netcore.platforms/5.0.0",
-      "hashPath": "microsoft.netcore.platforms.5.0.0.nupkg.sha512"
+      "sha512": "sha512-OrQLaxtZMIeS2yHSUtsKzeSdk9CPaCpyJ/JCs+wLfRGatjE8MLUS6LGj6vdbGRxqRavcXs79C9O3oWe6FJR0JQ==",
+      "path": "harfbuzzsharp/7.3.0",
+      "hashPath": "harfbuzzsharp.7.3.0.nupkg.sha512"
     },
-    "Microsoft.Win32.SystemEvents/5.0.0": {
+    "HarfBuzzSharp.NativeAssets.macOS/7.3.0": {
       "type": "package",
       "serviceable": true,
-      "sha512": "sha512-Bh6blKG8VAKvXiLe2L+sEsn62nc1Ij34MrNxepD2OCrS5cpCwQa9MeLyhVQPQ/R4Wlzwuy6wMK8hLb11QPDRsQ==",
-      "path": "microsoft.win32.systemevents/5.0.0",
-      "hashPath": "microsoft.win32.systemevents.5.0.0.nupkg.sha512"
+      "sha512": "sha512-LWcFJ39j+dN0KK8c/GJJZPPZPL9TqT2FA42/LRGqzUMmSm5LYbINOMnPvUr7RuLR6RFSmKIrgrlgObR8G5ho2A==",
+      "path": "harfbuzzsharp.nativeassets.macos/7.3.0",
+      "hashPath": "harfbuzzsharp.nativeassets.macos.7.3.0.nupkg.sha512"
+    },
+    "HarfBuzzSharp.NativeAssets.Win32/7.3.0": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-ulEewLMk+dNmbmpy15ny/YusI6JNUWqchF080TV2jgfFBXPXjWm767JleDi/S7hp8eDeEN6GYIIxpvNr5fLvIw==",
+      "path": "harfbuzzsharp.nativeassets.win32/7.3.0",
+      "hashPath": "harfbuzzsharp.nativeassets.win32.7.3.0.nupkg.sha512"
     },
     "Portable.BouncyCastle/1.8.9": {
       "type": "package",
@@ -152,26 +192,61 @@
       "path": "portable.bouncycastle/1.8.9",
       "hashPath": "portable.bouncycastle.1.8.9.nupkg.sha512"
     },
-    "System.Drawing.Common/5.0.0": {
+    "SkiaSharp/2.88.6": {
       "type": "package",
       "serviceable": true,
-      "sha512": "sha512-SztFwAnpfKC8+sEKXAFxCBWhKQaEd97EiOL7oZJZP56zbqnLpmxACWA8aGseaUExciuEAUuR9dY8f7HkTRAdnw==",
-      "path": "system.drawing.common/5.0.0",
-      "hashPath": "system.drawing.common.5.0.0.nupkg.sha512"
+      "sha512": "sha512-wdfeBAQrEQCbJIRgAiargzP1Uy+0grZiG4CSgBnhAgcJTsPzlifIaO73JRdwIlT3TyBoeU9jEqzwFUhl4hTYnQ==",
+      "path": "skiasharp/2.88.6",
+      "hashPath": "skiasharp.2.88.6.nupkg.sha512"
     },
-    "System.Runtime.CompilerServices.Unsafe/5.0.0": {
+    "SkiaSharp.NativeAssets.macOS/2.88.6": {
       "type": "package",
       "serviceable": true,
-      "sha512": "sha512-ZD9TMpsmYJLrxbbmdvhwt9YEgG5WntEnZ/d1eH8JBX9LBp+Ju8BSBhUGbZMNVHHomWo2KVImJhTDl2hIgw/6MA==",
-      "path": "system.runtime.compilerservices.unsafe/5.0.0",
-      "hashPath": "system.runtime.compilerservices.unsafe.5.0.0.nupkg.sha512"
+      "sha512": "sha512-Sko9LFxRXSjb3OGh5/RxrVRXxYo48tr5NKuuSy6jB85GrYt8WRqVY1iLOLwtjPiVAt4cp+pyD4i30azanS64dw==",
+      "path": "skiasharp.nativeassets.macos/2.88.6",
+      "hashPath": "skiasharp.nativeassets.macos.2.88.6.nupkg.sha512"
     },
-    "System.Text.Encoding.CodePages/5.0.0": {
+    "SkiaSharp.NativeAssets.Win32/2.88.6": {
       "type": "package",
       "serviceable": true,
-      "sha512": "sha512-NyscU59xX6Uo91qvhOs2Ccho3AR2TnZPomo1Z0K6YpyztBPM/A5VbkzOO19sy3A3i1TtEnTxA7bCe3Us+r5MWg==",
-      "path": "system.text.encoding.codepages/5.0.0",
-      "hashPath": "system.text.encoding.codepages.5.0.0.nupkg.sha512"
+      "sha512": "sha512-7TzFO0u/g2MpQsTty4fyCDdMcfcWI+aLswwfnYXr3gtNS6VLKdMXPMeKpJa3pJSLnUBN6wD0JjuCe8OoLBQ6cQ==",
+      "path": "skiasharp.nativeassets.win32/2.88.6",
+      "hashPath": "skiasharp.nativeassets.win32.2.88.6.nupkg.sha512"
+    },
+    "System.Buffers/4.5.1": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-Rw7ijyl1qqRS0YQD/WycNst8hUUMgrMH4FCn1nNm27M4VxchZ1js3fVjQaANHO5f3sN4isvP4a+Met9Y4YomAg==",
+      "path": "system.buffers/4.5.1",
+      "hashPath": "system.buffers.4.5.1.nupkg.sha512"
+    },
+    "System.Reflection.Emit.ILGeneration/4.7.0": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-AucBYo3DSI0IDxdUjKksBcQJXPHyoPyrCXYURW1WDsLI4M65Ar/goSHjdnHOAY9MiYDNKqDlIgaYm+zL2hA1KA==",
+      "path": "system.reflection.emit.ilgeneration/4.7.0",
+      "hashPath": "system.reflection.emit.ilgeneration.4.7.0.nupkg.sha512"
+    },
+    "System.Reflection.Emit.Lightweight/4.7.0": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-a4OLB4IITxAXJeV74MDx49Oq2+PsF6Sml54XAFv+2RyWwtDBcabzoxiiJRhdhx+gaohLh4hEGCLQyBozXoQPqA==",
+      "path": "system.reflection.emit.lightweight/4.7.0",
+      "hashPath": "system.reflection.emit.lightweight.4.7.0.nupkg.sha512"
+    },
+    "System.Runtime.CompilerServices.Unsafe/6.0.0": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-/iUeP3tq1S0XdNNoMz5C9twLSrM/TH+qElHkXWaPvuNOt+99G75NrV0OS2EqHx5wMN7popYjpc8oTjC1y16DLg==",
+      "path": "system.runtime.compilerservices.unsafe/6.0.0",
+      "hashPath": "system.runtime.compilerservices.unsafe.6.0.0.nupkg.sha512"
+    },
+    "System.Text.Encoding.CodePages/6.0.0": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-ZFCILZuOvtKPauZ/j/swhvw68ZRi9ATCfvGbk1QfydmcXBkIWecWKn/250UH7rahZ5OoDBaiAudJtPvLwzw85A==",
+      "path": "system.text.encoding.codepages/6.0.0",
+      "hashPath": "system.text.encoding.codepages.6.0.0.nupkg.sha512"
     }
   }
 }

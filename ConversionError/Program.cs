@@ -1,9 +1,7 @@
-﻿using System;
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
 using System.IO;
 using System.Linq;
 using GemBox.Document;
-using GemBox.Document.Tables;
 
 namespace ConversionError
 {
@@ -14,8 +12,13 @@ namespace ConversionError
             ComponentInfo.SetLicense("FREE-LIMITED-KEY");
 
             var document1 = DocumentModel.Load(Path.Combine(Directory.GetCurrentDirectory(), "file1.docx"));
+            var document2 = DocumentModel.Load(Path.Combine(Directory.GetCurrentDirectory(), "file2.docx"));
+            var document3 = DocumentModel.Load(Path.Combine(Directory.GetCurrentDirectory(), "file3.docx"));
+            var document4 = DocumentModel.Load(Path.Combine(Directory.GetCurrentDirectory(), "file4.docx"));
+            var document5 = DocumentModel.Load(Path.Combine(Directory.GetCurrentDirectory(), "file5.docx"));
+            var document6 = DocumentModel.Load(Path.Combine(Directory.GetCurrentDirectory(), "file6.docx"));
 
-            var mergedDocument = MergeDocuments(new List<DocumentModel> { document1 }, false);
+            var mergedDocument = MergeDocuments(new List<DocumentModel> { document1, document2, document3, document4, document5, document6 }, false);
 
             using var stream = new MemoryStream();
             mergedDocument.Save("merged.docx", SaveOptions.DocxDefault);
@@ -29,9 +32,6 @@ namespace ConversionError
 
             foreach (DocumentModel document in documents)
             {
-                // Make sure no styling changes occur
-                RenameStylesToBeUnique(document, documents.IndexOf(document));
-
                 var mapping = new ImportMapping(document, mergedDocument, false);
 
                 if (document.Styles.Contains("Hyperlink") && mergedDocument.Styles.Contains("Hyperlink"))
@@ -55,6 +55,7 @@ namespace ConversionError
                 foreach (Section section in documentSections)
                 {
                     Section importedSection = mergedDocument.Import(section, true, mapping);
+                    importedSection.PageSetup.SectionStart = SectionStart.NewPage;
                     mergedDocument.Sections.Add(importedSection);
                 }
 
@@ -80,60 +81,4 @@ namespace ConversionError
                 document.Sections.Add(new Section(document));
             }
         }
-
-        private static void RenameStylesToBeUnique(DocumentModel document, long index)
-        {
-            // Every document has a default style (mostly) called "Normal" but this style can differentiate from document to document
-            // So rename all the styles to be unique (by adding the index of the document)
-            List<Style> stylesOfCurrentDocument = document.Styles.ToList();
-
-            foreach (Style style in stylesOfCurrentDocument)
-            {
-                List<Block> elementsInDocumentWithStyle = document.Sections.SelectMany(s => s.Blocks.ToList())
-                    .SelectMany(b => b is Table table ? new List<Block> { table }.Concat(table.Rows.SelectMany(r => r.Cells.SelectMany(c => c.Blocks))) : new List<Block> { b })
-                    .Where(b => (b is Paragraph paragraph && paragraph.ParagraphFormat.Style == style) || (b is Table table && table.TableFormat.Style == style))
-                    .ToList();
-
-                style.Name += $"_{index}";
-
-                document.Save("test.xml");
-
-                foreach (Block block in elementsInDocumentWithStyle)
-                {
-                    switch (block)
-                    {
-                        case Paragraph paragraph when paragraph.ParagraphFormat.Style != null:
-                            paragraph.ParagraphFormat.Style.Name = style.Name;
-                            //ClearStylingIfConflicting(paragraph);
-                            break;
-                        case Table table:
-                            table.TableFormat.Style.Name = style.Name;
-                            break;
-
-                    }
-                }
-            }
-        }
-
-        private static void ClearStylingIfConflicting(Paragraph paragraph)
-        {
-            ParagraphFormat originalParagraphFormat = paragraph.ParagraphFormat.Clone();
-            ParagraphFormat styleParagraphFormat = paragraph.ParagraphFormat.Style?.ParagraphFormat.Clone();
-
-            if (styleParagraphFormat == null)
-            {
-                return;
-            }
-
-            if (Math.Abs(originalParagraphFormat.SpaceAfter - styleParagraphFormat.SpaceAfter) < 0.0000001 &&
-                Math.Abs(originalParagraphFormat.SpaceBefore - styleParagraphFormat.SpaceBefore) < 0.0000001 &&
-                Math.Abs(originalParagraphFormat.LeftIndentation - styleParagraphFormat.LeftIndentation) < 0.0000001 &&
-                Math.Abs(originalParagraphFormat.RightIndentation - styleParagraphFormat.RightIndentation) < 0.0000001)
-            {
-                return;
-            }
-
-            paragraph.ParagraphFormat.Style = null;
-        }
     }
-}
